@@ -1,0 +1,524 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "7e7122a5-f878-48e7-93df-f521ed1c21c7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Q1. Explain Class and Object with respect to Object-Oriented Programming. Give a suitable example."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ce60ec3f-18ad-4e39-a7df-fa53baf41a6c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# class: class is a blue print or basic template for the real world entities\n",
+    "# object: object are specific instances of a class"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "1f2603f6-beb2-406c-8636-dfc8fa15dc4c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#creating class\n",
+    "class course():\n",
+    "    def enrolled_course(self):\n",
+    "        return (\"Masters in data science\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "c2aabbc4-f148-48c5-b9d0-a1cf2673bbc9",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#creating object\n",
+    "obj = course()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "9e3bb8d2-aa50-4421-ba67-04ce2e814af8",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'Masters in data science'"
+      ]
+     },
+     "execution_count": 12,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#invoking method\n",
+    "obj.enrolled_course()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e80afe04-bded-4acd-b869-efe3924e900d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Q2. Name the four pillars of OOPs."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "85288d8d-5019-494f-8d12-2e5d30f954df",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#  four pillars of OOPs are :\n",
+    "# 1- inheritance\n",
+    "# 2- polymorphism\n",
+    "# 3-incapsulation\n",
+    "# 4- abstraction"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "da59b113-b762-4409-a4c6-9bf57ddbee78",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Q3. Explain why the __init__() function is used. Give a suitable example."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "8e9fa13e-2964-4595-82d1-9a160576b9db",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# init() method act as a constructor\n",
+    "# init() constructor assign all the values at the time of creating an object.\n",
+    "\n",
+    "# example:\n",
+    "\n",
+    "class student():\n",
+    "    def __init__(self,name,age,gender):\n",
+    "        self.name = name\n",
+    "        self.age = age\n",
+    "        self.gender = gender\n",
+    "    def student_details(self):\n",
+    "        print(\"Name of the student is: \", self.name)\n",
+    "        print(\"Age of the student is : \", self.age)\n",
+    "        print(\"Gender of the student is: \", self.gender)\n",
+    "    \n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "a2259541-3e77-43ab-a38d-7588787985ac",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Name of the student is:  sadaf\n",
+      "Age of the student is :  35\n",
+      "Gender of the student is:  female\n"
+     ]
+    }
+   ],
+   "source": [
+    "s = student('sadaf' , 35, 'female')\n",
+    "s.student_details()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "83decec5-72b7-4437-9849-c8e163280526",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Q4. Why self is used in OOPs?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ef3c6b5b-bee8-4287-82b2-e75a1fd7586a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# \"self\" is used to reference and manipulates the attribute and methods of the current instance of a class\n",
+    "# it is used to access instance variables , invoking instance methods and creating & modifying instance specific data.\n",
+    "# it is used as a first arguements as a class methods"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d1b728e7-bc73-48a3-8972-7ead3ee87f90",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Q5. What is inheritance? Give an example for each type of inheritance."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "cdc5f10e-7608-4161-83c1-b9fd28417772",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# inheritance is one of the important concepts of OOps in python. with inheritance one class can derive the properties of the another class\n",
+    "# it has super class & sub class or we can say parent class & child class . the properties of super class is inherit by sub class."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "id": "ba01eff1-715e-4bfb-b2e3-508860d9dc73",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# ex- 1 simple inheritance \n",
+    "class superclass :\n",
+    "    def method_super(self):\n",
+    "        return 'this is super method class'\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 42,
+   "id": "eb36c008-29f3-411e-a8aa-64b3c326452b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class subclass(superclass):\n",
+    "    def method_sub(self):\n",
+    "        return 'this is sub method class'\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 43,
+   "id": "c3a1a098-de68-499c-aa65-3ba16797f0df",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "obj_sub = subclass()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 44,
+   "id": "e812cc04-c1e3-4924-926f-8f63cd2f2bcb",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'this is super method class'"
+      ]
+     },
+     "execution_count": 44,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "obj_sub.method_super()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 45,
+   "id": "45fae95f-c631-4d40-a0ce-f601a4806b4d",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'this is sub method class'"
+      ]
+     },
+     "execution_count": 45,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "obj_sub.method_sub()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 56,
+   "id": "446fa984-3da7-482d-8717-e27c1caed8ce",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# ex 2- multilevel inheritance\n",
+    "class Level1 :\n",
+    "    def method1(self):\n",
+    "        return 'this is level1 class'"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 57,
+   "id": "7bbd76b0-b9e4-483f-af3b-ff5015abed56",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class Level2 :\n",
+    "    def method2(self):\n",
+    "        return 'this is level2 class'"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 58,
+   "id": "3e922e21-5d4a-4284-9d3a-89d47f64a0c5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class Level3:\n",
+    "    def method3(self):\n",
+    "        return 'this is level3 class'"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 64,
+   "id": "acd0b9cf-5c41-420f-9b9b-9e94606f235f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "l3 = Level3()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 65,
+   "id": "fbd05cc3-7d59-4a01-8362-8d8a021f9551",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "AttributeError",
+     "evalue": "'Level3' object has no attribute 'method1'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mAttributeError\u001b[0m                            Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[65], line 1\u001b[0m\n\u001b[0;32m----> 1\u001b[0m \u001b[43ml3\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mmethod1\u001b[49m()\n",
+      "\u001b[0;31mAttributeError\u001b[0m: 'Level3' object has no attribute 'method1'"
+     ]
+    }
+   ],
+   "source": [
+    "l3.method1()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 66,
+   "id": "69e998a7-91f7-48f8-98b8-ee0cc72d35b0",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "AttributeError",
+     "evalue": "'Level3' object has no attribute 'method2'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mAttributeError\u001b[0m                            Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[66], line 1\u001b[0m\n\u001b[0;32m----> 1\u001b[0m \u001b[43ml3\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mmethod2\u001b[49m()\n",
+      "\u001b[0;31mAttributeError\u001b[0m: 'Level3' object has no attribute 'method2'"
+     ]
+    }
+   ],
+   "source": [
+    "l3.method2()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 62,
+   "id": "1055d25f-fb23-4858-a071-0dc88cabf09b",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'this is level3 class'"
+      ]
+     },
+     "execution_count": 62,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "l3.method3()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 68,
+   "id": "89af5a3b-39f2-4411-a12e-6d297518f5c5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# ex 3- multiple inheritance\n",
+    "class Dad:\n",
+    "    def d_method(self):\n",
+    "        return 'This is my Dad class'\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 69,
+   "id": "ee0c4ac5-e176-4be6-9d6a-0eaa86847fbd",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class Mother:\n",
+    "    def m_method(self):\n",
+    "        return 'This is my Mom class'"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 70,
+   "id": "147753f7-788b-4e32-9b98-bfb1e11288bf",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class Child(Dad,Mother):\n",
+    "    def c_method(self):\n",
+    "        return 'This is my Child class'"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 71,
+   "id": "1795a67f-7051-4e79-a694-cf932e4d2240",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "son = Child()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 72,
+   "id": "0ff75270-5a98-4107-89a6-08ab6489e149",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'This is my Dad class'"
+      ]
+     },
+     "execution_count": 72,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "son.d_method()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 73,
+   "id": "72f9437e-fd7b-43a8-805c-89086242e553",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'This is my Mom class'"
+      ]
+     },
+     "execution_count": 73,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "son.m_method()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 74,
+   "id": "a146ba1e-39de-4455-b2ed-d2c31b91f047",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'This is my Child class'"
+      ]
+     },
+     "execution_count": 74,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "son.c_method()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "739f8607-43b1-4309-8182-6ec5942cac7b",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.8"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
